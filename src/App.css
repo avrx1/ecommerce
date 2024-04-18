@@ -1,0 +1,248 @@
+
+ul{
+  list-style-type: none;
+  margin-left: 2rem;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+
+}
+nav ul{
+
+  display: none;
+}
+nav .right{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 1rem;
+}
+.avatar{
+  width: 40px;
+  cursor: pointer;
+}
+
+.sneaker-inner{
+  padding: 1rem;
+}
+.sneaker img:first-child{
+  max-height: 300px;
+  
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.next-icon, .prev-icon{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.7);
+  display: inline;
+  padding: 1.5rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  
+}
+
+.basket > :not(hr){
+    padding: 0.5em 1em;
+}
+
+.basket{
+  position: absolute;
+  width: 95%;
+  height: 250px;
+  background-color: white;
+  left: 0;
+  right: 0;
+  top: 5rem;
+  margin-inline: auto;
+  
+  
+  
+  box-shadow: 2px 4px 8px -3px rgba(0,0,0,0.75), -3px 4px 8px -3px rgba(0,0,0,0.75);  
+
+
+  z-index: 10;
+
+  border-radius: 0.5em;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+.prev-icon{
+  left: 1rem;
+  background-image: url("images/icon-previous.svg");
+  background-position: 45%;
+
+}
+.next-icon{
+  right: 1rem;
+  background-image: url("images/icon-next.svg");
+  background-position: 50%;
+}
+
+.tool{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  background-color: hsl(223, 64%, 98%);
+  margin-block:1rem;
+  gap: 0.5rem;
+}
+
+.btn{
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sneaker .btn{
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+}
+
+.company-name{
+  color: hsl(26, 100%, 55%);
+  font-size: 0.8rem;
+  padding-block: 1rem;
+}
+
+.shoes-desc{
+  padding-top: 1rem;
+  color: rgba(0,0,0,0.7);
+}
+
+.shoes-price{
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-block: 1rem;
+}
+
+.img-select{
+  display: none;
+}
+
+nav{
+  position: relative;
+}
+
+.tool{
+  border-radius: 0.5rem;
+}
+.tool .plus, .minus{
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+.plus:hover, .minus:hover{
+  background-color: rgba(0,0,0,0.2);
+}
+
+.basket{
+  overflow-y: auto;
+}
+.basket-shoe{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content:flex-start;
+  height: 60px;;
+}
+
+.basket-shoe .icon{
+  width: 15px;
+  margin-left: auto;
+}
+.basket-shoe img{
+  border-radius: 5px;;
+  width: 40px;;
+}
+.basket-shoe h3{
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  opacity: 0.6;
+}
+
+
+@media screen and (min-width: 600px){
+
+  .right{
+    padding-right: 1rem;
+  }
+  .basket{  
+    width: 350px;
+    height: 200px;
+    right: 1em;
+    left: unset;
+  }
+  nav ul{
+    display: flex;
+    gap: 1rem;
+    margin-right: 1em;
+  }
+  nav a{
+    
+    color: rgba(0,0,0,0.7);
+  }
+  .prev-icon, .next-icon{
+    display: none;
+  }
+  .sneaker-ui{
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+    gap: 1rem;
+    align-items: center;
+  }
+  nav{
+    margin-bottom: 4rem;
+  }
+  img{
+    border-radius: 5%;
+  }
+
+  .img-select div{
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 5px;
+  }
+  .img-select div:hover{
+    cursor: pointer;
+  }
+  .img-select .active-img{
+    opacity: 0.3;
+  }
+
+
+  .sneaker{
+    
+    max-width: 800px;
+    padding: 1rem;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .img-select{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
